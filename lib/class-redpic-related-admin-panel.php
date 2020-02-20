@@ -359,7 +359,7 @@ class Redpic_Related_Admin {
 		return '<p class="description">' . $desc .'</p>';
 	}
 
-	function list_thumbnail_sizes() {
+	private function list_thumbnail_sizes() {
 		global $_wp_additional_image_sizes;
 		$sizes = array();
 		$rSizes = array();
