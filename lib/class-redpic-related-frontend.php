@@ -42,16 +42,18 @@ class Redpic_Related_Frontend {
 			));
 		}
 		ob_start();
-		if( $template === 'standard.php' ) {
-			require RELATED_DIR . 'templates/standard.php';
-		} else {
-			if( $this->check_theme_template_file_exist($template) ) {
-				require get_template_directory() . '/' . $template;
+		if( count($rel_item) > 0 ) {
+			if( $template === 'standard.php' ) {
+				require RELATED_DIR . 'templates/standard.php';
+			} else {
+				if( $this->check_theme_template_file_exist($template) ) {
+					require get_template_directory() . '/' . $template;
+				}
 			}
+			$form = ob_get_contents();
+			ob_end_clean();
+			return $form;
 		}
-		$form = ob_get_contents();
-		ob_end_clean();
-		return $form;
 	}
 
 
