@@ -21,8 +21,6 @@ class Redpic_Related_Db {
 			$cache         = $cache_handler->get_cache( $this->post->ID, $this->settings['cache_time'] );
 			if ( $cache ) {
 				$sql    = "SELECT `p`.`ID`, `p`.`post_title`, `p`.`post_content` FROM `{$this->db->prefix}posts` AS `p`
-					INNER JOIN `{$this->db->prefix}term_relationships` AS `tr` ON `p`.`ID` = `tr`.`object_id`
-					INNER JOIN `{$this->db->prefix}term_taxonomy` AS `tt` ON `tt`.`term_taxonomy_id` = `tr`.`term_taxonomy_id`
 					WHERE `p`.ID IN (";
 				$sql    .= implode( ',', $cache );
 				$sql    .= ')';
