@@ -44,7 +44,7 @@ class Redpic_Related_Db {
 			case 'categories':
 				$categories = get_the_category( $this->post->ID );
 
-				if ( ! count( $categories ) ) {
+				if ( ! count( $categories ) || !$categories ) {
 					return __return_empty_array();
 				}
 
@@ -53,7 +53,7 @@ class Redpic_Related_Db {
 			case 'tags':
 				$tags = get_the_tags( $this->post->ID );
 
-				if ( ! count( $tags ) ) {
+				if ( ! count( $tags ) || !$tags ) {
 					return __return_empty_array();
 				}
 
