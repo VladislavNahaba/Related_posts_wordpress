@@ -13,7 +13,6 @@ class Redpic_Related_Init {
 			'add_to' => array(
 				'single' => 'single'
 			),
-			'no_posts' => '',
 			'order' => 'random',
 			'source' => 'context',
 			'asc_desc' => 'asc',
