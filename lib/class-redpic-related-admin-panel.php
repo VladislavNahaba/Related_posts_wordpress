@@ -272,13 +272,6 @@ class Redpic_Related_Admin {
 			case 'output':
 				$fields = array(
 					array(
-						'id' => 'no_posts',
-						'title' => __('No posts are found'),
-						'type' => 'textarea',
-						'size' => '',
-						'desc' => __('Enter the custom text that will be displayed if no posts are found.')
-					),
-					array(
 						'id' => 'short_desc',
 						'title' => __('Short Description Length'),
 						'type' => 'number',
