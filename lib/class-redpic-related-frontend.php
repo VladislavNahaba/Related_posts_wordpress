@@ -41,8 +41,8 @@ class Redpic_Related_Frontend {
 				'date' => $this->get_date($rel->ID)
 			));
 		}
-		ob_start();
 		if( count($rel_item) > 0 ) {
+			ob_start();
 			if( $template === 'standard.php' ) {
 				require RELATED_DIR . 'templates/standard.php';
 			} else {
